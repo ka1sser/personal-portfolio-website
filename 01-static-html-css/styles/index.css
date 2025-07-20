@@ -2,13 +2,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 18px;
 }
 
 body {
     padding-top: 6rem;
     background-color: #F4E8C1;
     font-family: Roboto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 h1, h2, h3 {
@@ -47,4 +54,56 @@ nav {
 
 .nav a:visited{
     color: #507DBC;
+}
+
+#home {
+    height: 100vh;
+    display: grid;
+    grid-template: 0.3fr 3fr 1.7fr / 1fr 3fr 1fr;
+    font-family: 'Libre Baskerville';
+}
+
+#home h1{
+    color: #26A96C;
+    font-size: 5.5rem;                         
+    letter-spacing: 1rem;
+    text-align: center;
+}
+
+#hero{
+    grid-area: 2 / 2 / 3 / 3;
+    justify-items: center;
+    align-content: center;
+}
+
+#hero p{
+    color: #011936;
+    padding-left: 30rem;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+#design-text{
+    grid-area: 3 / 1 / 4 / 2;
+    justify-items: end;
+    align-content: start;
+}
+
+#design-text p{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+#about {
+    height: 100vh;
+    padding-top: 6rem;
+}
+
+#intro {
+    display: flex;
+}
+
+#intro img{
+    height: 18.5rem;
+    width: 18.5rem;
 }
