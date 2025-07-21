@@ -7,10 +7,10 @@
 html {
   /* ensure html is treated as a scroll container */
   overflow-y: scroll;            
-  scroll-snap-type: y proximity;  /* enable vertical snap, required snaps */
+  scroll-snap-type: y mandatory;  /* enable vertical snap, required snaps */
   scroll-behavior: smooth;        /* makes jumps animate smoothly */
   /* if you have a fixed header, offset the snap point by its height: */
-  /* scroll-padding-top: 6rem; */
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
 #home-nav, #about, #works, #services, #contact {
     min-height: 100vh;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 h1, h2, h3 {
@@ -114,7 +114,7 @@ p#design.italic{
 }
 
 #intro {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -148,5 +148,36 @@ p#design.italic{
 
 #tech-stack {
     height: 100vh;
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+#tech-stack h2{
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+#programming-languages{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+#tools{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#tech-stack img{
+    height: 2.7rem;
+    width: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#tech-stack p{
+    font-size: 1rem;
 }
