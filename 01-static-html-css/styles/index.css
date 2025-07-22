@@ -27,7 +27,7 @@ body {
 }
 
 #home-nav, #about, #works, #services, #contact {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     scroll-snap-align: center;
 }
 
@@ -117,12 +117,12 @@ p#design.italic{
 }
 
 #intro {
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 10rem;
     scroll-snap-align: start;
-    margin-bottom: 10rem;
 }
 
 #intro-text{
@@ -156,8 +156,10 @@ p#design.italic{
 }
 
 #tech-stack h2{
-    margin-bottom: 5rem;
+    font-size: 2rem;
+    margin-bottom: 7rem;
     padding-top: 5rem;
+    letter-spacing: 1.5rem;
 }
 
 #programming-languages{
@@ -165,7 +167,7 @@ p#design.italic{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 #tools{
@@ -176,11 +178,50 @@ p#design.italic{
 }
 
 #tech-stack img{
-    height: 2.7rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     margin-bottom: 1rem;
 }
 
 #tech-stack p{
     font-size: 1rem;
+}
+
+#works{
+    height: 100vh;
+}
+
+#works h2 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: auto;
+    padding: 2rem 2rem;
+    margin: 1rem 1rem;
+}
+
+.card img{
+    /* border: 0.15rem solid black; */
+    width: 25rem;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+.card h3, p{
+    margin: 0.5rem 0rem;
 }
