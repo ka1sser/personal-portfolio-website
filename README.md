@@ -1,4 +1,4 @@
-# Kai's Front-End Developer Joourney
+# Kai's Front-End Developer Journey
 
 This repository showcases my progression as a front-end developer — from building static, responsive websites using HTML and CSS to crafting fully interactive, animated portfolios using modern tools like **React** and **Next.js**.
 
