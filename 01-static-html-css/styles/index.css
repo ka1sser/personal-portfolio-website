@@ -64,6 +64,7 @@ nav {
 }
 
 .nav a{
+    color: #507DBC;
     text-decoration: none;
 }
 
@@ -81,12 +82,13 @@ nav {
 #home h1{
     color: #26A96C;
     font-size: 5.5rem;                         
-    letter-spacing: 1rem;
+    letter-spacing: 2rem;
     text-align: center;
 }
 
 #hero{
-    margin-top:5rem;
+    margin-top:6rem;
+    padding-bottom: 2rem;
     grid-area: 2 / 2 / 3 / 3;
     justify-items: center;
     align-content: center;
@@ -94,8 +96,9 @@ nav {
 
 #hero p{
     color: #011936;
-    padding-left: 30rem;
-    font-size: 2rem;
+    /* padding-left: 30rem; */
+    font-size: 1rem;
+    padding: 2rem 0rem;
     letter-spacing: 0.5rem;
 }
 
