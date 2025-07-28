@@ -19,5 +19,24 @@ This version includes a simple yet responsive layout built using just HTML and C
 - Media queries for responsiveness
 
 **Tools:** `HTML`, `CSS`  
-**Live Demo:** [View Version 1](#)  
 **Folder:** `01-static-html-css/`
+
+## 2. JS — Interactive Navigation Bar and Form Validation
+
+This version includes a responsive layout built using just HTML and CSS with additional animation and interactivity using JavaScript.
+
+### 📁 Structure:
+- `index.html` — Main layout and content
+- `styles/index.css` — All styling
+- `images/` — Assets used for visuals
+
+### ✅ Features:
+- Semantic HTML5 elements
+- Responsive layout using Flexbox/Grid
+- Media queries for responsiveness
+- CSS Transition and CSS Animation
+- Interactive Navbar Toggle
+- Form Validation
+
+**Tools:** `HTML`, `CSS`, `JavaScript`  
+**Folder:** `02-js-interactive/`
