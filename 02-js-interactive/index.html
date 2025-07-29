@@ -6,20 +6,30 @@
 
         <meta name="author" content="Kaisser Sereno"/>
         <meta name="description" content="Personal Portfolio Version 2: Responsive with interactive navigation bar toggle and form validation."/>
+
+        <link rel="stylesheet" href="./styles/index.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <title>Kaisser Sereno</title>
     <body>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="nav-ul">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
         <main>
             <div id="hero">
-                <span id="black-line">--------</span>
+                <span id="black-line"></span>
                 <h1>FRONTEND DEVELOPER</h1>
                 <h1>UI/UX DESIGNER</h1>
                 <h2>KAISSER SERENO</h2>
@@ -144,15 +154,11 @@
             <div id="contact">
                 <div>
                     <h1>LET'S WORK TOGETHER!</h1>
-                    <form>
-                        <input type="text" placeholder="EMAIL"/>
-                        <input type="text" placeholder="SUBJECT"/>
-                        <input type="text" placeholder="MESSAGE"/>
-                        <button type="submit">SUBMIT</button>
-                    </form>
+                    <img src="./images/email-logo.png" alt="A picture of an envelope" />
+                    <p>serenokaisser.pro@gmail.com</p>
                 </div>
                 <div class="socials">
-                    <p>You can find me in the wild:</p>
+                    <p>You can also find me in the wild:</p>
                     <div>
                         <img src="./images/github-logo.png" alt="Logo of Github"/>
                         <img src="./images/itch.io-logo.png" alt="Logo of Itch.io"/>
