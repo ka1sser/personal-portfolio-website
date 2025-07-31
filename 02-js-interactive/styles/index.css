@@ -114,3 +114,73 @@ ul#nav-ul{
     align-content: center;
     box-shadow: 5px 5px rgb(112, 112, 112);
 }
+
+#about{
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    gap: 1.25rem 1.25rem
+}
+
+.blue-line{
+    background-color: var(--blue-accent);
+    height: 0.5rem;
+    width: 44.375rem;
+}
+
+#blue-line-1{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+#about h1{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    font-size: 3rem;
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    align-self:last baseline;  
+    color: var(--green-primary);
+}
+
+#about p{
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    height: 23.125rem;
+    font-size: 1.3125rem;
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    align-content: center;
+    color: var(--dark-blue-secondary);
+}
+
+#blue-line-2{
+    grid-row-start: 8;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+#skills{
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    gap: 1.25rem 1.25rem
+}
+
+.skills-container{
+    display: flex;
+}
+
+h1#language{
+    
+}
