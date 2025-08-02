@@ -284,3 +284,64 @@ h1#tools{
     transform: rotate(-38.25deg);
     transform-origin: left;
 }
+
+.project-page{
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    gap: 1.25rem 1.25rem;
+}
+
+.project-page h1{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    font-size: 3rem;
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
+    height: 7.875rem;
+    align-content: center;
+    align-self: center;
+    color: var(--green-primary);
+    text-align: left;
+}
+
+.project-page p{
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 23.1875rem;
+    font-size: 1.2rem;
+    font-family: Roboto;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    color: var(--dark-blue-secondary);
+}
+
+.project-page a{
+    text-decoration: none;
+    color: var(--dark-blue-secondary);
+}
+
+div.yellow-square{
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    width: 33rem;
+    height: 23.25rem;
+    background-color: var(--gold-accent);
+}
+
+div.blue-square{
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 7;
+    grid-column-end: 7;
+    width: 10.1875rem;
+    height: 15.0625rem;
+    background-color: var(--blue-accent);
+}
