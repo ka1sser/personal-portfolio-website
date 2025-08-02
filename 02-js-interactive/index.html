@@ -7,8 +7,7 @@
         <meta name="author" content="Kaisser Sereno"/>
         <meta name="description" content="Personal Portfolio Version 2: Responsive with interactive navigation bar toggle and form validation."/>
 
-        <link rel="stylesheet" href="./styles/index.css"/>
-
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +15,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./styles/index.css"/>
+        <script src="./scripts/index.js" defer/></script>
+        <title>Kaisser Sereno</title>
     </head>
-    <title>Kaisser Sereno</title>
     <body>
-        <nav>
+        <nav class="page">
             <ul id="nav-ul">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#works">WORKS</a></li>
@@ -28,14 +30,14 @@
             </ul>
         </nav>
         <main>
-            <div id="hero">
+            <div id="hero" class="page">
                 <span id="black-line"></span>
                 <h1 id="title-1">FRONTEND DEVELOPER</h1>
                 <h1 id="title-2">UI/UX DESIGNER</h1>
                 <h2>KAISSER SERENO</h2>
                 <span>GET IN TOUCH</span>
             </div>
-            <div id="about">
+            <div id="about" class="page">
                 <div id="blue-line-1">
                     <div class="blue-line"></div>
                 </div>
@@ -55,7 +57,7 @@
                     <div class="blue-line"></div>
                 </div>
             </div>
-            <div id="skills">
+            <div id="skills" class="page">
                 <h1 id="language">What I'm good at</h1>
                 <div id="skills-container-1">
                     <ul>
@@ -97,7 +99,7 @@
                 <h1 id="tools">What tools I use</h1>
             </div>
             <div id="works">
-                <div class="project-page">
+                <div class="project-page page">
                     <h1>PITAKA</h1>
                     <p>
                         <strong><em>Pitaka</em></strong> is a comprehensive wallet application designed to help users seamlessly track, categorize, and manage their
@@ -115,7 +117,7 @@
                     <div class="yellow-square"></div>
                     <div class="blue-square"></div>
                 </div>
-                <div class="project-page">
+                <div class="project-page page">
                     <h1>TRADECKO</h1>
                     <p>
                         <strong><em>Tradecko</em></strong> is a web-based utility built for Pokémon Trading Card Game (TCG) collectors and traders.
@@ -134,7 +136,7 @@
                     <div class="blue-square"></div>
                 </div>
             </div>
-            <div id="services">
+            <div id="services" class="page">
                 <h1>What I can do</h1>
                 <ul>
                     <li>UI/UX Design Implementation</li>
@@ -143,7 +145,7 @@
                     <li>Search Engine Optimization</li>
                 </ul>
             </div>
-            <div id="contact">
+            <div id="contact" class="page">
                 <div id="contact-container">
                     <h1>LET'S WORK TOGETHER!</h1>
                     <img src="./images/email-logo.png" alt="A picture of an envelope" />
