@@ -323,7 +323,7 @@ h1#tools{
 
 .project-page a{
     text-decoration: none;
-    color: var(--dark-blue-secondary);
+    color: var(--blue-accent);
 }
 
 div.yellow-square{
@@ -344,4 +344,47 @@ div.blue-square{
     width: 10.1875rem;
     height: 15.0625rem;
     background-color: var(--blue-accent);
+}
+
+#services{
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    gap: 1.25rem 1.25rem;
+}
+
+#services h1{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    font-size: 3rem;
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
+    height: 7.875rem;
+    align-content: center;
+    align-self: center;
+    color: var(--green-primary);
+    text-align: left;
+}
+
+#services ul{
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 7;    
+}
+
+#services li{
+    width: 44.375rem;
+    height: 8.0625rem;
+    border: solid 0.1875rem var(--blue-accent);
+    font-size: 1.35rem;
+    font-family: Roboto;
+    font-weight: normal;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.2rem;
 }
