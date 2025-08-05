@@ -20,7 +20,7 @@ body {
     margin: auto;
 }
 
-#hero h2, #hero h1, #hero span, nav {
+#hero h2, #hero h1, #hero a, nav {
   opacity: 0;
 }
 
@@ -42,7 +42,7 @@ body {
   animation: fadeIn 2s forwards;
 }
 
-.fade-in-span {
+.fade-in-a {
   animation: fadeIn 2s forwards, blinking 1.5s infinite alternate;
 }
 
@@ -83,10 +83,33 @@ ul#nav-ul{
 }
 
 #nav-ul a{
+    position: relative;
     text-decoration: none;
     color: var(--blue-accent);
+    cursor: pointer;
+    transition: color 0.35s ease-in-out;
 }
 
+#nav-ul a::before{
+    content: '';
+    position: absolute;
+    bottom: -7.5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--gold-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease-in-out;
+}
+
+#nav-ul a:hover{
+    color: var(--gold-accent);
+}
+
+#nav-ul a:hover::before{
+    transform: scaleX(1);
+}
 
 #hero{
     height: 100vh;
@@ -132,7 +155,7 @@ ul#nav-ul{
     align-self: center;
 }
 
-#hero span{
+#hero a{
     grid-row-start: 5;
     grid-row-end: 5;
     grid-column-start: 2;
@@ -147,6 +170,8 @@ ul#nav-ul{
     height: 6.875rem;
     border-radius: 20px;
     align-content: center;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #about{

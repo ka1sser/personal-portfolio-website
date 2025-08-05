@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hero = document.getElementById('hero');
   const h2 = hero.querySelector('h2');
   const h1s = hero.querySelectorAll('h1');
-  const span = hero.querySelector('span');
+  const a = hero.querySelector('a');
   const nav = document.querySelector('nav');
 
   const observer = new IntersectionObserver(entries => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         h2.classList.remove('fade-in-h2');
         h1s.forEach(h1 => h1.classList.remove('fade-in-h1'));
-        span.classList.remove("fade-in-span");
+        a.classList.remove("fade-in-a");
         nav.classList.remove('fade-in-nav');
 
         setTimeout(() => {
@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
           h1s.forEach(h1 => h1.classList.add('fade-in-h1'));
-        }, 1500);
+        }, 2000);
 
         setTimeout(() => {
-          span.classList.add("fade-in-span");
+          a.classList.add("fade-in-a");
           nav.classList.add('fade-in-nav');
-        }, 3000);
+        }, 4000);
       } else {
 
         h2.classList.remove('fade-in-h2');
         h1s.forEach(h1 => h1.classList.remove('fade-in-h1'));
-        span.classList.remove('fade-in-span');
+        a.classList.remove('fade-in-a');
         nav.classList.remove('fade-in-nav');
       }
     });
