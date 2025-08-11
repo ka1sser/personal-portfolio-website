@@ -411,7 +411,22 @@ h1#tools{
     transform-origin: left;
 }
 
-.project-page{
+.fadeIn-project{
+    animation: fadeIn 1s ease-in forwards;
+}
+
+#proj-1, #proj-2{
+    opacity: 0;
+}
+
+#proj-1{
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    gap: 1.25rem 1.25rem;
+}
+
+#proj-2{
     height: 100vh;
     display: grid;
     grid-template: repeat(8, 1fr) / repeat(8, 1fr);
