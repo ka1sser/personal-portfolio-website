@@ -144,11 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           proj_1.classList.remove("fadeIn-project");
-          
+
           setTimeout(() => {
             proj_1.classList.add("fadeIn-project");
           }, 500);
-
         } else {
           proj_1.classList.remove("fadeIn-project");
         }
@@ -168,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             proj_2.classList.add("fadeIn-project");
           }, 500);
-
         } else {
           proj_2.classList.remove("fadeIn-project");
         }
@@ -193,15 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
           setTimeout(() => {
             services_h1.classList.add("fadeIn-services");
-          }, 500)
-          
+          }, 500);
+
           setTimeout(() => {
             services_li.forEach((li, i) => {
-              li.style.animationDelay = `${0.25 * i}s`; 
-              li.classList.add("fadeIn-services"); 
+              li.style.animationDelay = `${0.25 * i}s`;
+              li.classList.add("fadeIn-services");
             });
-          }, 800)
-
+          }, 800);
         } else {
           services_h1.classList.remove("fadeIn-services");
           services_li.forEach((li) => {
@@ -214,5 +211,50 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   servicesObserver.observe(services);
+
+  // ----- contact -----
+
+  const contact = document.getElementById("contact");
+  const contact_container = contact.querySelector("#contact-container");
+  const contact_socials = contact.querySelector("#socials-container");
+
+  const contactObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          contact_container.classList.remove("fadeIn-contact");
+
+          setTimeout(() => {
+            contact_container.classList.add("fadeIn-contact");
+          }, 100);
+
+        } else {
+          contact_container.classList.remove("fadeIn-contact");
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  contactObserver.observe(contact_container);
+
+  const socialsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          contact_socials.classList.remove("fadeIn-contact");
+
+          setTimeout(() => {
+            contact_socials.classList.add("fadeIn-contact");
+          }, 1500);
+        } else {
+          contact_socials.classList.remove("fadeIn-contact");
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  socialsObserver.observe(contact_socials);
 });
 
