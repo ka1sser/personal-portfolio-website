@@ -467,6 +467,7 @@ h1#tools{
     color: var(--blue-accent);
 }
 
+
 div.yellow-square{
     grid-row-start: 3;
     grid-row-end: 6;
@@ -487,6 +488,10 @@ div.blue-square{
     background-color: var(--blue-accent);
 }
 
+.fadeIn-services {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
 #services{
     height: 100vh;
     display: grid;
@@ -495,6 +500,7 @@ div.blue-square{
 }
 
 #services h1{
+    opacity: 0;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -517,6 +523,7 @@ div.blue-square{
 }
 
 #services li{
+    opacity: 0;
     width: 44.375rem;
     height: 8.0625rem;
     border: solid 0.1875rem var(--blue-accent);

@@ -178,5 +178,41 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   proj_2_observer.observe(proj_2);
+
+  // ----- services -----
+
+  const services = document.getElementById("services");
+  const services_h1 = services.querySelector("h1");
+  const services_li = services.querySelectorAll("li");
+
+  const servicesObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          services_h1.classList.remove("fadeIn-services");
+
+          setTimeout(() => {
+            services_h1.classList.add("fadeIn-services");
+          }, 500)
+          
+          setTimeout(() => {
+            services_li.forEach((li, i) => {
+              li.style.animationDelay = `${0.25 * i}s`; 
+              li.classList.add("fadeIn-services"); 
+            });
+          }, 800)
+
+        } else {
+          services_h1.classList.remove("fadeIn-services");
+          services_li.forEach((li) => {
+            li.classList.remove("fadeIn-services");
+          });
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  servicesObserver.observe(services);
 });
 
