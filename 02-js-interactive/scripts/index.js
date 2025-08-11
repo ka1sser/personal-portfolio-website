@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const h1s = hero.querySelectorAll('h1');
   const a = hero.querySelector('a');
   const nav = document.querySelector('nav');
-  // --- about elements ---
-  const about = document.getElementById('about');
-  const blue_line_1 = about.querySelector("#blue-line-1");
-  const blue_line_2 = about.querySelector("#blue-line-2");
-  const about_h1 = about.querySelector('h1')
-  const about_p = about.querySelector('p')
 
   const heroObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -48,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   heroObserver.observe(hero);
 
+   // --- about elements ---
+  const about = document.getElementById('about');
+  const blue_line_1 = about.querySelector("#blue-line-1");
+  const blue_line_2 = about.querySelector("#blue-line-2");
+  const about_h1 = about.querySelector('h1')
+  const about_p = about.querySelector('p')
+  
   const aboutObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
 
@@ -75,5 +76,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   aboutObserver.observe(about);
 
+  // --- skills elements ---
+  const skills = document.getElementById('skills')
+  const skills_language = skills.querySelector('#language')
+  const skills_tools = skills.querySelector('#tools')
+  const yellow_line = skills.querySelector('#yellow-line')
+  const skills_container_1 = skills.querySelector('#skills-container-1')
+  const skills_container_2 = skills.querySelector('#skills-container-2')
+  const skills_container_3 = skills.querySelector('#skills-container-3')
+  const skills_container_4 = skills.querySelector('#skills-container-4')
+  const skills_container_5 = skills.querySelector('#skills-container-5')
+
+  const skillsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        skills_language.classList.remove("fadeIn-skills-language")
+        skills_tools.classList.remove("fadeIn-skills-tools")
+        yellow_line.classList.remove('fadeIn-yellow-line')
+        skills_container_1.classList.remove('fadeIn-skills')
+        skills_container_2.classList.remove('fadeIn-skills')
+        skills_container_3.classList.remove('fadeIn-skills')
+        skills_container_4.classList.remove('fadeIn-skills')
+        skills_container_5.classList.remove('fadeIn-skills')
+        
+        setTimeout(() => {
+          yellow_line.classList.add("fadeIn-yellow-line");
+        }, 500);
+
+        setTimeout(() => {
+          skills_language.classList.add("fadeIn-skills-language");
+          skills_container_1.classList.add("fadeIn-skills");
+          skills_container_2.classList.add("fadeIn-skills");
+          skills_container_3.classList.add("fadeIn-skills");
+        }, 1500);
+
+        setTimeout(() => {
+          skills_tools.classList.add("fadeIn-skills-tools");
+          skills_container_4.classList.add("fadeIn-skills");
+          skills_container_5.classList.add("fadeIn-skills");
+        }, 2500);
+        
+      } else {
+        skills_language.classList.remove("fadeIn-skills-language");
+        skills_tools.classList.remove("fadeIn-skills-tools");
+        yellow_line.classList.remove("fadeIn-yellow-line");
+        skills_container_1.classList.remove("fadeIn-skills");
+        skills_container_2.classList.remove("fadeIn-skills");
+        skills_container_3.classList.remove("fadeIn-skills");
+        skills_container_4.classList.remove("fadeIn-skills");
+        skills_container_5.classList.remove("fadeIn-skills");
+      }
+    });
+  }, { threshold: 0.5 });
+
+  skillsObserver.observe(skills);
 });
 

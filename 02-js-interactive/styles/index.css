@@ -273,6 +273,23 @@ ul#nav-ul{
     grid-column-end: 6; */
 }
 
+@keyframes fadeIn-no-translate {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fadeIn-yellow-line{
+    animation: fadeIn-no-translate 0.5s ease-in forwards;
+}
+
+.fadeIn-skills-language, .fadeIn-skills-tools, .fadeIn-skills{
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
 #skills{
     height: 100vh;
     width: 90rem;
@@ -284,6 +301,7 @@ ul#nav-ul{
 }
 
 h1#language{
+    opacity: 0;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -296,6 +314,7 @@ h1#language{
 }
 
 div#skills-container-1{
+    opacity: 0;
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 2;
@@ -308,6 +327,7 @@ div#skills-container-1{
 }
 
 div#skills-container-2{
+    opacity: 0;
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 3;
@@ -320,6 +340,7 @@ div#skills-container-2{
 }
 
 div#skills-container-3{
+    opacity: 0;
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 4;
@@ -332,6 +353,7 @@ div#skills-container-3{
 }
 
 div#skills-container-4{
+    opacity: 0;
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 6;
@@ -346,6 +368,7 @@ div#skills-container-4{
 }
 
 div#skills-container-5{
+    opacity: 0;
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 7;
@@ -360,6 +383,7 @@ div#skills-container-5{
 }
 
 h1#tools{
+    opacity: 0;
     grid-row-start: 7;
     grid-row-end: 7;
     grid-column-start: 5;
@@ -373,6 +397,7 @@ h1#tools{
 }
 
 #yellow-line{
+    opacity: 0;
     position: absolute;
     background-color: var(--gold-accent);
     height: 0.5rem;
