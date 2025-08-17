@@ -15,9 +15,29 @@
 }
 
 body {
-    background-color: var(--beige-primary);
-    width: 90rem;
-    margin: auto;
+  background-color: var(--beige-primary);
+  width: 100%;
+  max-width: 90rem;   
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.menu-btn,
+.sidebar-close-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #hero h2, #hero h1, #hero a, nav {
@@ -52,6 +72,14 @@ body {
 
 ul{
     list-style-type: none;
+}
+
+#sidebar{
+    display: none;
+}
+
+.hideOnDesktop{
+    display: none;
 }
 
 nav {
@@ -287,11 +315,11 @@ ul#nav-ul{
 }
 
 .fadeIn-yellow-line{
-    animation: fadeIn-no-translate 0.5s ease-in forwards;
+    animation: fadeIn-no-translate 1s ease-in forwards;
 }
 
 .fadeIn-skills-language, .fadeIn-skills-tools, .fadeIn-skills{
-    animation: fadeIn 0.5s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 #skills{
@@ -493,7 +521,7 @@ div.blue-square{
 }
 
 .fadeIn-services {
-    animation: fadeIn 0.5s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 #services{
@@ -542,7 +570,7 @@ div.blue-square{
 }
 
 .fadeIn-contact{
-    animation: fadeIn 0.5s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 #contact{
@@ -657,10 +685,67 @@ div#img-container img{
 @media only screen and (max-width: 480px){
     body{
         max-width: 425px;
+        margin: auto;
     }
     
     nav{
+        position: fixed;
+        max-width: 425px;
+        height: auto;
+    }
+
+    .hide-on-mobile{
         display: none;
+    }
+
+    #show-on-mobile{
+        display: flex;
+    }
+
+    #sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        /* display: flex; */
+        flex-direction: column;
+        height: 100dvh;
+        width: 60%;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        background-color: var(--gold-accent);
+        z-index: 30;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        /* transform: translateX(0); */
+        /* add a subtle shadow */
+        box-shadow: -6px 0 20px rgba(0,0,0,0.12);
+    }
+    
+    #sidebar li{
+        z-index: 10;
+        text-align: right;
+        width: 100%;
+        color: var(--blue-accent);
+        font-family: Roboto;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 0.25rem;
+        text-align: center;
+    }
+    
+    #sidebar a{
+        z-index: 10;
+        text-decoration: none;
+        color: var(--blue-accent);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .hideOnDesktop{
+        position:absolute;
+        display: flex;
+        top: 15px; 
+        right: 15px;
     }
 
     #hero{
@@ -677,14 +762,16 @@ div#img-container img{
         grid-column-start: 2;
         grid-column-end: 10;
         align-self:last baseline;
+        font-size: 2.5rem;
     }
-
+    
     #title-2{
         grid-row-start: 5;
         grid-row-end: 5;
         grid-column-start: 2;
         grid-column-end: 10;
         align-self: center;
+        font-size: 2.5rem;
     }
 
     #hero h2{

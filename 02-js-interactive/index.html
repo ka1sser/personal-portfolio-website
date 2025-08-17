@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
     <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Kaisser Sereno" />
+        <meta name="description"
+            content="Personal Portfolio Version 2: Responsive with interactive navigation bar toggle and form validation." />
 
-        <meta name="author" content="Kaisser Sereno"/>
-        <meta name="description" content="Personal Portfolio Version 2: Responsive with interactive navigation bar toggle and form validation."/>
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
 
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="./styles/index.css"/>
-        <script src="./scripts/index.js" defer/></script>
+        <!-- Material Symbols Rounded -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" href="./styles/index.css" />
+        <!-- fixed script tag syntax -->
+        <script src="./scripts/index.js" defer></script>
+
         <title>Kaisser Sereno</title>
     </head>
+
     <body>
+        <ul id="sidebar" aria-hidden="true">
+            <!-- use a button for the close control (accessible) -->
+            <li class="sidebar-close">
+                <button onclick="closeSidebar()" aria-label="Close sidebar" class="sidebar-close-btn">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
         <nav>
             <ul id="nav-ul">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <!-- menu icon for mobile -->
+                <li class="hideOnDesktop" onclick="openSidebar()">
+                    <button class="menu-btn" aria-label="Open navigation">
+                        <span class="material-symbols-rounded">menu</span>
+                    </button>
+                </li>
+
+                <!-- desktop links -->
+                <li class="hide-on-mobile"><a href="#about">ABOUT</a></li>
+                <li class="hide-on-mobile"><a href="#works">WORKS</a></li>
+                <li class="hide-on-mobile"><a href="#services">SERVICES</a></li>
+                <li class="hide-on-mobile"><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+
         <main>
+            <!-- rest of your content unchanged -->
             <div id="hero">
                 <h1 id="title-1">FRONTEND DEVELOPER</h1>
                 <h1 id="title-2">UI/UX DESIGNER</h1>
                 <h2>KAISSER SERENO</h2>
                 <a href="#contact">GET IN TOUCH</a>
             </div>
+
             <div id="about">
                 <div id="blue-line-1">
                     <div class="blue-line"></div>
@@ -43,14 +71,12 @@
                 <h1>KAISSER</h1>
                 <p>
                     My name is pronounced the way you say “ ‘kay, sir. ”
-                    <br>
-                    <br>
-                    <br>
-                    I design user-friendly web experiences, develop clean and optimized code, and deliver high-quality projects with efficiency and precision.
-                    <br>
-                    <br>
-                    <br>
-                    I am learning how to make games and game assets on my free time. It is fun and relaxing. I also like to collect Pokemon cards.
+                    <br><br><br>
+                    I design user-friendly web experiences, develop clean and optimized code, and deliver high-quality
+                    projects with efficiency and precision.
+                    <br><br><br>
+                    I am learning how to make games and game assets on my free time. It is fun and relaxing. I also like
+                    to collect Pokemon cards.
                 </p>
                 <div id="blue-line-2">
                     <div class="blue-line"></div>

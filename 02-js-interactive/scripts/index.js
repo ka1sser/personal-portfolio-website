@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
           h1s.forEach((h1) => h1.classList.remove("fade-in-h1"));
           a.classList.remove("fade-in-a");
           nav.classList.remove("fade-in-nav");
-          blue_line_1.classList.remove("blue-line-1-animation");
 
           // ----- hero section-----
           setTimeout(() => {
@@ -23,13 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
           setTimeout(() => {
             h1s.forEach((h1) => h1.classList.add("fade-in-h1"));
-          }, 1000);
+          }, 500);
 
           setTimeout(() => {
             a.classList.add("fade-in-a");
             nav.classList.add("fade-in-nav");
-          }, 2000);
-        } else {
+          }, 1000);
+        }
+        else {
           h2.classList.remove("fade-in-h2");
           h1s.forEach((h1) => h1.classList.remove("fade-in-h1"));
           a.classList.remove("fade-in-a");
@@ -63,8 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
             blue_line_2.classList.add("blue-line-2-animation");
             about_h1.classList.add("fade-in-about");
             about_p.classList.add("fade-in-about");
-          }, 250);
-        } else {
+          }, 500);
+        }
+        else {
           blue_line_1.classList.remove("blue-line-1-animation");
           blue_line_2.classList.remove("blue-line-2-animation");
           about_h1.classList.remove("fade-in-about");
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.35 }
   );
 
   aboutObserver.observe(about);
@@ -117,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             skills_container_4.classList.add("fadeIn-skills");
             skills_container_5.classList.add("fadeIn-skills");
           }, 1500);
-        } else {
+        }
+        else {
           skills_language.classList.remove("fadeIn-skills-language");
           skills_tools.classList.remove("fadeIn-skills-tools");
           yellow_line.classList.remove("fadeIn-yellow-line");
@@ -148,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             proj_1.classList.add("fadeIn-project");
           }, 500);
-        } else {
+        }
+        else {
           proj_1.classList.remove("fadeIn-project");
         }
       });
@@ -167,7 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
             proj_2.classList.add("fadeIn-project");
           }, 500);
-        } else {
+        }
+        else {
           proj_2.classList.remove("fadeIn-project");
         }
       });
@@ -199,9 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
               li.classList.add("fadeIn-services");
             });
           }, 800);
-        } else {
-          services_h1.classList.remove("fadeIn-services");
-          services_li.forEach((li) => {
+        }
+        else {
+            services_h1.classList.remove("fadeIn-services");
+            services_li.forEach((li) => {
             li.classList.remove("fadeIn-services");
           });
         }
@@ -228,7 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_container.classList.add("fadeIn-contact");
           }, 100);
 
-        } else {
+        }
+        else {
           contact_container.classList.remove("fadeIn-contact");
         }
       });
@@ -246,8 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
           setTimeout(() => {
             contact_socials.classList.add("fadeIn-contact");
-          }, 1500);
-        } else {
+          }, 1000);
+        }
+        else {
           contact_socials.classList.remove("fadeIn-contact");
         }
       });
@@ -258,3 +265,11 @@ document.addEventListener('DOMContentLoaded', () => {
   socialsObserver.observe(contact_socials);
 });
 
+const sidebar = document.querySelector("#sidebar")
+const openSidebar = () => {
+  sidebar.style.display = "flex";
+}
+
+const closeSidebar = () => {
+  sidebar.style.display = 'none';
+}
